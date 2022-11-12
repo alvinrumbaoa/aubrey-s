@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Box, Heading, HStack, VStack, Text} from '@chakra-ui/react'
+import {Container, Box, Button, Fade, Heading, HStack, VStack, Text} from '@chakra-ui/react'
 
 
 const Nav = () => {
