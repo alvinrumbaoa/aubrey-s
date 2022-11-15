@@ -7,7 +7,7 @@ import "aos/dist/aos.css"
 
 const Layout = ({children}) => {
 	return (
-		<Flex direction="column" flex="1">
+		<Flex background="#FEDADA" direction="column" >
 			<Nav/>
 				{children}
 			<Footer/>

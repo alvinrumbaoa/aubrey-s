@@ -1,9 +1,9 @@
 import { extendTheme } from '@chakra-ui/react'
-
-import "@fontsource/inter"
+import "@fontsource/cormorant-sc"
+import "@fontsource/poppins"
 // 2. Update the breakpoints as key-value pairs
 const breakpoints = {
-  sm: '420px',
+  sm: '400px',
   md: '700px',
   lg: '920px',
   xl: '1440px',
@@ -14,8 +14,8 @@ const theme = extendTheme({
 
   breakpoints,
   fonts: {
-    heading: '"Inter", sans-serif; ',
-    body: '"Inter", sans-serif; ',
+    heading: '"Cormorant SC", serif;  ',
+    body: '"Poppins", sans-serif;',
   
   },
  
