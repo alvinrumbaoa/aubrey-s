@@ -12,7 +12,7 @@ export default function Home() {
 		anime({
 		targets: '.wave-top > path',
 		easing: 'linear',
-		duration: 7000,
+		duration: 3000,
 		loop: true,
 		d: [
 			{ value: [wave1, wave2] },
@@ -34,19 +34,19 @@ export default function Home() {
       <Flex bgColor="#FEDADA" as="main" role="main" direction={{ sm: 'column', md: 'row', lg: 'row'  }} >
        
             {/* HERO TITLE */}
-            <Flex p={12} bgColor="#FEDADA" display="flex" >
+            <Flex p={20} bgColor="#FEDADA" display="flex" >
               <Box >
-                <Heading as='h1' fontSize="80" textShadow="black 1px 1px 1px" color="#C2176C">Be the best version of yourself</Heading>
-                <Text color="gray.600" fontSize="20" mt={2}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
+                <Heading as='h1' fontSize={{sm:50,md:60,lg:80}} textShadow="black 1px 1px 1px" color="#C2176C">Be the best version of yourself</Heading>
+                <Text w="70%" color="gray.600" fontSize={{sm:16,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
-                  <HStack mt={3}>
+                  <HStack mt={10}>
                     <Link><Image src="images/Facebook.png" boxSize={50} /></Link>
                     <Link><Image src="images/Instagram.png" boxSize={50}/></Link>
                     <Link><Image src="images/Shopee.png" boxSize={50}/></Link>
                     <Link><Image src="images/Tiktok.png" boxSize={50}/></Link>
                     <Link><Image src="images/Youtube.png" boxSize={50}/></Link>
                   </HStack>
-                <Button mt={3} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
+                <Button mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
               </Box>
               <Box>
                 <Image src="images/Hero.png" w={{sm:400, md:500, lg:600}} w={{sm:400, md:500, lg:600}}/>
@@ -54,22 +54,27 @@ export default function Home() {
             </Flex>
   
       </Flex>  
-      <Flex>
-        <svg class="wave-top" width="100vw" viewBox="0 0 1000 250">
-  				  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V-8.5451e-06H1150C1100 -8.5451e-06 1000 -8.5451e-06 900 -8.5451e-06C800 -8.5451e-06 700 -8.5451e-06 600 -8.5451e-06C500 -8.5451e-06 400 -8.5451e-06 300 -8.5451e-06C200 -8.5451e-06 100 -8.5451e-06 50 -8.5451e-06H0V108.306Z" fill="#FF5975"/>
-		   	</svg>
-
-         
-      </Flex> 
+      
       <Flex m={100} justify="center">
      
               <iframe
                 title='naruto'
                 src='https://www.youtube.com/embed/QhBnZ6NPOY0'
-                allowFullScreen w={400} h={400}
+                allowFullScreen width="900" height="400" 
               />
    
       </Flex>
+      <Flex h="80vh" background="#FF5975" justify="center">
+        <Heading>Featured Products</Heading>
+
+      </Flex>
+      <Flex>
+        <svg class="wave-top" width="100vw" viewBox="0 50 1000 250"> 
+  				  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V-8.5451e-06H1150C1100 -8.5451e-06 1000 -8.5451e-06 900 -8.5451e-06C800 -8.5451e-06 700 -8.5451e-06 600 -8.5451e-06C500 -8.5451e-06 400 -8.5451e-06 300 -8.5451e-06C200 -8.5451e-06 100 -8.5451e-06 50 -8.5451e-06H0V108.306Z" fill="#FF5975"/>
+		   	</svg>
+
+         
+      </Flex> 
     </Box>
   )
 }

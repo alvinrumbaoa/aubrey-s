@@ -6,9 +6,6 @@ const Nav = () => {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
-
-
-
   return (
 	<Flex as="nav" m={5} p={5} role="navigation" justify="space-between" bg="bg-accent">
 				<Flex>
