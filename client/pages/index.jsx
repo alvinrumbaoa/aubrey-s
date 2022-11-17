@@ -1,7 +1,10 @@
 import React,{useEffect} from "react";
 import Head from 'next/head'
-import {Flex, Box, Container,Grid, Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
+import {Flex, Box, Container,Grid, Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
+import { Card, CardHeader , CardBody, CardFooter } from '@chakra-ui/card'
+import {ButtonGroup} from '@chakra-ui/button'
 import anime from "animejs"
+
 
 export default function Home() {
   const wave1 = "M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V108.306Z"
@@ -33,46 +36,116 @@ export default function Home() {
       <Flex bgColor="#FEDADA" as="main" role="main" direction={{ sm: 'column', md: 'row', lg: 'row'  }} >
        
             {/* HERO TITLE */}
-            <Flex p={20} bgColor="#FEDADA" display="flex" >
+            <Flex  p={20} bgColor="#FEDADA" display="flex" >
               <Box >
-                <Heading as='h1' fontSize={{sm:50,md:60,lg:80}} textShadow="black 1px 1px 1px" color="#C2176C">Be the best version of yourself</Heading>
-                <Text w="70%" color="gray.600" fontSize={{sm:16,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
+                <Heading  as='h1' fontSize={{sm:50,md:60,lg:80}} textShadow="black 1px 1px 1px" color="#C2176C">Be the best version of yourself</Heading>
+                <Text   w="70%" color="gray.600" fontSize={{sm:16,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
-                  <HStack mt={10}>
+                  <HStack  mt={10}>
                     <Link><Image src="images/Facebook.png" alt="Facebook" boxSize={50} /></Link>
                     <Link><Image src="images/Instagram.png" alt="instagram logo" boxSize={50}/></Link>
                     <Link><Image src="images/Shopee.png" alt="shoppe" boxSize={50}/></Link>
                     <Link><Image src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
                     <Link><Image src="images/Youtube.png" alt="youtube logo" boxSize={50}/></Link>
                   </HStack>
-                <Button mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
+                <Button   mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
               </Box>
-              <Box>
-                <Image src="images/Hero.png" w={{sm:400, md:500, lg:600}} w={{sm:400, md:500, lg:600}}/>
+              <Box >
+                <Image data-aos="zoom-in"  src="images/Hero.png" w={{sm:400, md:500, lg:600}} w={{sm:400, md:500, lg:600}}/>
               </Box>
             </Flex>
   
       </Flex>  
       
-      <Flex m={100} justify="center">
+      <Flex data-aos="zoom-in" m={100} justify="center">
      
               <iframe
-                title='naruto'
+                title='Aubreys'
                 src='/videos/video.mp4'
                 allowFullScreen width="900" height="400" 
               />
-   
       </Flex>
-      <Flex h="80vh" background="#FF5975" justify="center">
-        <Heading mt={20} color="white" fontSize="90">Featured Products</Heading>
-        {/* cards */}
+      <Flex h="full"  direction="column" background="#FF5975" justify="center">
+        <Heading mt={20} color="white" textAlign="center" fontSize="60">Featured Products</Heading>
+        <Grid p={10} justify="center" templateColumns='repeat(3, 1fr)' gap={1}>
+            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+                  <CardBody p={2}>  
+                        <Image src="/images/product.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
+                        <Stack mt='6' spacing='3'>
+                          <Text color='pink.600' fontStyle="bold" fontSize='2xl'>Rosmar Kagayaku Soap</Text>
+                          <Text textSize="sm">
+                              This soap is perfect for every skin.
+                            </Text>
+                            <Text color='pink.200' fontSize='2xl'>
+                              $450
+                            </Text>
+                        </Stack>
+                  </CardBody> 
+                  <Divider />
+                  <CardFooter>
+                    <ButtonGroup mt={3} spacing='2'>
+                      <Button variant='solid' colorScheme='pink'>
+                        Buy now
+                      </Button>
+                    </ButtonGroup>
+                  </CardFooter>
+            </Card>
+
+            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+                  <CardBody p={2}>  
+                        <Image src="/images/product.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
+                        <Stack mt='6' spacing='3'>
+                          <Text color='pink.600' fontStyle="bold" fontSize='2xl'>Rosmar Kagayaku Soap</Text>
+                          <Text textSize="sm">
+                              This soap is perfect for every skin.
+                            </Text>
+                            <Text color='pink.200' fontSize='2xl'>
+                              $450
+                            </Text>
+                        </Stack>
+                  </CardBody> 
+                  <Divider />
+                  <CardFooter>
+                    <ButtonGroup mt={3} spacing='2'>
+                      <Button variant='solid' colorScheme='pink'>
+                        Buy now
+                      </Button>
+                    </ButtonGroup>
+                  </CardFooter>
+            </Card>
+
+            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+                  <CardBody p={2}>  
+                        <Image src="/images/product.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
+                        <Stack mt='6' spacing='3'>
+                          <Text color='pink.600' fontStyle="bold" fontSize='2xl'>Rosmar Kagayaku Soap</Text>
+                          <Text textSize="sm">
+                              This soap is perfect for every skin.
+                            </Text>
+                            <Text color='pink.200' fontSize='2xl'>
+                              $450
+                            </Text>
+                        </Stack>
+                  </CardBody> 
+                  <Divider />
+                  <CardFooter>
+                    <ButtonGroup mt={3} spacing='2'>
+                      <Button variant='solid' colorScheme='pink'>
+                        Buy now
+                      </Button>
+                    </ButtonGroup>
+                  </CardFooter>
+            </Card>
+        </Grid>
+            
+                 
+           
+
       </Flex>
       <Flex>
         <svg className="wave-top" width="100vw" viewBox="0 50 1000 250"> 
   				  <path fillRule="evenodd" clipRule="evenodd" d="M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V-8.5451e-06H1150C1100 -8.5451e-06 1000 -8.5451e-06 900 -8.5451e-06C800 -8.5451e-06 700 -8.5451e-06 600 -8.5451e-06C500 -8.5451e-06 400 -8.5451e-06 300 -8.5451e-06C200 -8.5451e-06 100 -8.5451e-06 50 -8.5451e-06H0V108.306Z" fill="#FF5975"/>
 		   	</svg>
-
-         
       </Flex> 
     </Box>
   )

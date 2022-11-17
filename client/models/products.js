@@ -17,6 +17,18 @@ const ProductSchema = new mongoose.Schema({
 	description:{
 		type: String,
 	},
+	imageURL1:{
+		type:String,
+	},
+	imageURL2:{
+		type:String,
+	},
+	imageURL3:{
+		type:String,
+	},
+	order:{
+		type:Number	
+	}
 })
 
 export default mongoose.models['Product'] || mongoose.model("Product", ProductSchema)
