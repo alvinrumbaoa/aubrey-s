@@ -8,7 +8,7 @@ const Nav = () => {
 
   return (
 	<Flex as="nav" m={5} p={5} role="navigation" justify="space-between" bg="bg-accent">
-				<Flex>
+				<Flex >
 					<Tooltip label="Home" >
 						<Link href="/"><Image src="/images/Logo.png" alt="logo" w="100" h="120" align="center" justify="center" p={{sm:7}} mt={{lg:6}} /></Link>
 					</Tooltip>

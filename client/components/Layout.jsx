@@ -8,7 +8,7 @@ import Footer from './Footer'
 const Layout = ({children}) => {
 
 	useEffect(() =>{
-		Aos.init({duration: 6000})
+		Aos.init({duration: 1000})
 	},[]);
 	
 	

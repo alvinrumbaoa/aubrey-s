@@ -14,7 +14,7 @@ const theme = extendTheme({
 
   breakpoints,
   fonts: {
-    heading: '"Cormorant SC", serif;  ',
+    heading: '"Poppins", serif;  ',
     body: '"Poppins", sans-serif;',
   
   },
