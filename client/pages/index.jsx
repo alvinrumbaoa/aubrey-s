@@ -1,8 +1,9 @@
 import React,{useEffect} from "react";
 import Head from 'next/head'
-import {Flex, Box, Container,SimpleGrid, Grid, GridItem,Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
+import {Flex, Box, Container,Highlight,Badge,SimpleGrid, Grid, GridItem,Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
 import { Card, CardHeader , CardBody, CardFooter } from '@chakra-ui/card'
 import {ButtonGroup} from '@chakra-ui/button'
+import Carousel from '../components/Carousel'
 import Testimonials from '../components/Testimonials'
 import anime from "animejs"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -38,7 +39,10 @@ export default function Home() {
             {/* HERO TITLE */}
             <Flex  data-aos="zoom-in" p={20} direction={{ xs:'column', sm: 'column', md: 'row', lg: 'row'  }} bgColor="#FEDADA" display="flex" >
               <Box  justify={{base:"center", md:"start"}}  align={{base:"center", md:"start"}} >
-                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"lg ",sm:70,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C">Be the "BEST" version of yourself</Heading>
+                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"lg ",sm:70,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C"><Highlight
+                  query='BEST'
+                  styles={{ px: '3', py: '2', rounded: 'full', bg: 'white' }}
+                >Be the BEST version of yourself</Highlight></Heading>
                 <Text textAlign={{base:"center", md:"start"}} color="gray.600" fontSize={{sm:15,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
                   <Flex direction="row" justify={{base:"center", md:"start"}} align="center" mt={10} >
@@ -61,18 +65,11 @@ export default function Home() {
   
       </Flex>  
     
-      <Flex p={20}  direction="column" justify="center" align="center">
-              <Heading>Latest News</Heading>       
-              <Box mt={20} align="center" ><iframe
-                pos="absolute"
-                title='Aubreys'
-                src='/videos/video.mp4'
-                loading="ease"
-                loop="true"
-                allowFullScreen 
-              /> </Box>
-
-   
+      <Flex p={20}  data-aos="zoom-in" direction="column" justify="center" align="center">
+              <Heading textAlign="center" mb={10} fontSize="7xl" textShadow="gray  2px 2px 2px"color="#FF5975">Latest News</Heading>       
+            
+              <Carousel/>
+              
       </Flex>
     
       <Flex h="full"  w='100%' pb={10} direction="column" background="#FF5975" justify="center">
@@ -248,14 +245,16 @@ export default function Home() {
 
             <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
+                
                         <Image src="/images/product8.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
-                          <Text color='pink.600' fontStyle="bold" fontSize='2xl'>Rosmar Kagayaku Soap</Text>
+                          <Text color='pink.600' fontStyle="bold" fontSize='2xl'>Rosmar Kagayaku Soap <Badge colorScheme='purple'>New</Badge></Text>
+
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='pink.200' fontSize='2xl'>
-                              $450
+                              $450 
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -373,7 +372,21 @@ export default function Home() {
       <Flex p={10} display="flex" direction="column" justify="flex-start">
         <Testimonials/>
       </Flex> 
-     
+      <Flex p={20} background="#D92B5D" display="flex" direction="column" align="center" justify="center">
+            <Heading color="white" textAlign="center" fontSize="5xl">Aubrey Approves your Success</Heading>
+            <Text color="white">Be our Reseller and Business Partner</Text>
+            <Flex direction={{base:"column", lg:"row"}}>
+                <Image src="/images/aubreyprod.png" alt="allprod"/>
+                <Flex direction="column" justify="space-around">
+                  <VStack textAlign="start">
+                    <Text color="white" >Launch your business sooner</Text>
+                    <Text color="white">Resell an extensive range</Text>
+                    <Text color="white">Carry no inventory</Text>
+                    <Button variant='solid' colorScheme="pink">Learn More</Button>
+                  </VStack>
+                </Flex>
+            </Flex>
+      </Flex>
     </Box>
   )
 }
