@@ -37,14 +37,15 @@ export default function Home() {
       </Head>
       <Flex  as="main" role="main" direction={{ sm: 'column', md: 'row', lg: 'row'  }} >
             {/* HERO TITLE */}
-            <Flex  data-aos="zoom-in" p={20} direction={{ xs:'column', sm: 'column', md: 'row', lg: 'row'  }} bgColor="#FEDADA" display="flex" >
-              <Box  justify={{base:"center", md:"start"}}  align={{base:"center", md:"start"}} >
-                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"lg ",sm:70,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C"><Highlight
+            <Flex  p={20} direction={{ xs:'column', sm: 'column', md: 'row', lg: 'row'  }} bgColor="#FEDADA" display="flex" >
+              <Box justify={{sm:"center", md:"start"}}  align={{sm:"center", md:"start"}} >
+                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"50",sm:60,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C"><Highlight
                   query='BEST'
                   styles={{ px: '3', py: '2', rounded: 'full', bg: 'white' }}
                 >Be the BEST version of yourself</Highlight></Heading>
-                <Text textAlign={{base:"center", md:"start"}} color="gray.600" fontSize={{sm:15,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
+                <Text textAlign={{base:"center", md:"start"}} color="gray.600" fontSize={{xs:12, sm:15,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
+                
                   <Flex direction="row" justify={{base:"center", md:"start"}} align="center" mt={10} >
                     <Link href="#"><Image m={2} src="images/Facebook.png" alt="Facebook" boxSize={50} /></Link>
                     <Link href="#"><Image m={2} src="images/Instagram.png" alt="instagram logo" boxSize={50}/></Link>
@@ -52,10 +53,7 @@ export default function Home() {
                     <Link href="#"><Image m={2} src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
                     <Link href="#"><Image m={2} src="images/Youtube.png" alt="youtube logo" boxSize={50}/></Link>
                   </Flex>
-                <Button rightIcon={<ShoppingCartIcon/>} data-aos="zoom-out" _hover={{
-                      background: "white",
-                      color: "teal.500",
-                    }} mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
+                  <Button rightIcon={<ShoppingCartIcon/>} _hover={{background: "white", color: "teal.500"}} mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
                 </Box>
                 <Box >
                 <Image display={{xs:'none', sm:'none', md:'flex', lg: 'flex'}} src="images/Hero.png" w={{sm:400, md:500, lg:600}} w={{sm:400, md:500, lg:600}}/>
