@@ -3,11 +3,13 @@ import "@fontsource/cormorant-sc"
 import "@fontsource/poppins"
 // 2. Update the breakpoints as key-value pairs
 const breakpoints = {
-  sm: '400px',
-  md: '700px',
-  lg: '920px',
-  xl: '1440px',
-  '2xl': '1536px',
+    xs: '20em', 
+    sm: '30em',
+    md: '50em',
+    lg: '62em',
+    xl: '80em',
+    '2xl': '96em',
+  
 }
 
 const theme = extendTheme({
