@@ -1,10 +1,11 @@
 import React,{useEffect} from "react";
 import Head from 'next/head'
-import {Flex, Box, Container,SimpleGrid, Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
+import {Flex, Box, Container,SimpleGrid, Grid, GridItem,Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
 import { Card, CardHeader , CardBody, CardFooter } from '@chakra-ui/card'
 import {ButtonGroup} from '@chakra-ui/button'
+import Testimonials from '../components/Testimonials'
 import anime from "animejs"
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export default function Home() {
   const wave1 = "M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V108.306Z"
@@ -48,8 +49,11 @@ export default function Home() {
                     <Link><Image src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
                     <Link><Image src="images/Youtube.png" alt="youtube logo" boxSize={50}/></Link>
                   </HStack>
-                <Button data-aos="zoom-out"  mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
-              </Box>
+                <Button rightIcon={<ShoppingCartIcon/>} data-aos="zoom-out" _hover={{
+                      background: "white",
+                      color: "teal.500",
+                    }} mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
+                </Box>
               <Box >
                 <Image display={{sm:'none', md:'flex', lg: 'flex'}} src="images/Hero.png" w={{sm:400, md:500, lg:600}} w={{sm:400, md:500, lg:600}}/>
               </Box>
@@ -64,6 +68,7 @@ export default function Home() {
                 title='Aubreys'
                 src='/videos/video.mp4'
                 loading="ease"
+                loop="true"
                 allowFullScreen width="520" height="390" 
               /> </Box>
 
@@ -110,7 +115,7 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
+                            <Text color='red.500' fontSize='2xl'>
                               $450
                             </Text>
                         </Stack>
@@ -133,7 +138,7 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
+                            <Text color='red.500' fontSize='2xl'>
                               $450
                             </Text>
                         </Stack>
@@ -156,7 +161,7 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
+                            <Text color='red.500' fontSize='2xl'>
                               $450
                             </Text>
                         </Stack>
@@ -179,7 +184,7 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
+                            <Text color='red.500' fontSize='2xl'>
                               $450
                             </Text>
                         </Stack>
@@ -202,7 +207,7 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
+                            <Text color='red.500' fontSize='2xl'>
                               $450
                             </Text>
                         </Stack>
@@ -225,7 +230,7 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
+                            <Text color='red.500' fontSize='2xl'>
                               $450
                             </Text>
                         </Stack>
@@ -266,7 +271,7 @@ export default function Home() {
             
         </SimpleGrid>
         <Flex justify="center">
-          <Button p={6} size="2xl">More Products</Button>        
+          <Button p={6} size="2xl"><Link href="/products">More Products</Link></Button>        
            
         </Flex>  
       </Flex>
@@ -277,17 +282,93 @@ export default function Home() {
   				  <path fillRule="evenodd" clipRule="evenodd" d="M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V-8.5451e-06H1150C1100 -8.5451e-06 1000 -8.5451e-06 900 -8.5451e-06C800 -8.5451e-06 700 -8.5451e-06 600 -8.5451e-06C500 -8.5451e-06 400 -8.5451e-06 300 -8.5451e-06C200 -8.5451e-06 100 -8.5451e-06 50 -8.5451e-06H0V108.306Z" fill="#FF5975"/>
 		   	</svg>
       </Flex> 
-      <Flex display="flex" direction="column" h="full" justify="center" >
+      <Flex p={10} display="flex" direction="column" h="full" align="center" justify="center" >
         <Heading fontSize={{sm:35, md:45, lg:70}}aos-data="fade-up" p={20} justify="center" align="center" color="gray.700">Our Trusted Partners</Heading>
         <SimpleGrid alignItems="center"  columns={[1, null, 5]} spacing="20px">
-              <Image src="/images/rosmar.png" alt="rosmar-logo"  height="60"/>
-              <Image src="/images/psph.png" alt="rosmar-logo"  height="50"/>
-              <Image  src="/images/gluta.png" alt="rosmar-logo"  height="50"/>
-              <Image src="/images/brilliant.png" alt="rosmar-logo"  height="50"/>
-              <Image src="/images/fairy.png" alt="rosmar-logo"  height="50"/>
+              <Image data-aos="zoom-in" src="/images/rosmar.png" alt="rosmar-logo"  height="60"/>
+              <Image data-aos="zoom-in" src="/images/psph.png" alt="rosmar-logo"  height="50"/>
+              <Image data-aos="zoom-in" src="/images/gluta.png" alt="rosmar-logo" height="100"/>
+              <Image data-aos="zoom-in" src="/images/brilliant.png" alt="rosmar-logo"  height="50"/>
+              <Image data-aos="zoom-in" src="/images/fairy.png" alt="rosmar-logo"  height="200"/>
           
         </SimpleGrid>
       </Flex>
+      <Flex p={10} mt={10} display="flex" direction={{sm:"column", md:"column",lg:"row"}} align="center" justify="space-around" >
+                  <Image src="/images/delivery.png" alt="delivery truck"></Image>
+                  <Stack maxW='md' >
+                    <Heading color="#BC2973">Delivery is safe and secure</Heading>
+                    <Text>A bundle of 210+ ready-to-use, responsive and accessible components with clever structured sourcode files</Text>
+                    <Button size='2xl'>Order Now</Button>
+                  </Stack>
+      </Flex>
+      <Flex p={10} display="flex" direction="column" align="center" justify="center">
+        <Box p={2} justify="center" align="center">
+          <Image src="/images/Pretty Woman.png" alt="woman"/>
+          <Heading color="#BC2973">Why Aubrey Curations?</Heading>
+          <Text>Because this beautiful and responsive React components will help your to realize your next project in no time.</Text>
+        </Box> 
+          <Grid justify="space-between" align="center"
+          templateColumns={{
+          base: 'repeat(1, 1fr)',
+          sm: 'repeat(2, 1fr)',
+          md: 'repeat(4, 1fr)',
+            }}
+            gap={6}>
+              <GridItem data-aos="fade-right" justify="center"w="100%" colSpan={{ base: 1, sm: 2, md: 2 }}>
+                 <Image src="/images/map.png" alt=""/>
+              </GridItem>
+              <Grid data-aos="fade-left" p={20} justify="center" templateColumns={{
+          base: 'repeat(2, 1fr)',
+          sm: 'repeat(2, 1fr)',
+          md: 'repeat(2, 1fr)',
+            }} gap={10}>
+              <GridItem p={5} w="100%">
+                <Flex flexDirection={'column'}>
+                  <Text fontSize={'4xl'} fontWeight={'bold'}>
+                    200+
+                  </Text>
+                  <Box fontSize={'sm'}>
+                    Affiliated Resellers
+                  </Box>
+                  </Flex>
+                </GridItem>
+                <GridItem p={5} w="100%">
+                  <Flex flexDirection={'column'}>
+                    <Text fontSize={'4xl'} fontWeight={'bold'}>
+                      150
+                    </Text>
+                    <Box fontSize={'sm'}>
+                      Cities Distributed
+                    </Box>
+                  </Flex>
+                </GridItem>
+                <GridItem p={5} w="100%">
+                  <Flex flexDirection={'column'}>
+                    <Text fontSize={'4xl'} fontWeight={'bold'}>
+                      150
+                    </Text>
+                    <Box fontSize={'sm'}>
+                      Cities Distributed
+                    </Box>
+                  </Flex>
+                </GridItem>
+                <GridItem p={5}  w="100%">
+                  <Flex flexDirection={'column'}>
+                    <Text fontSize={'4xl'} fontWeight={'bold'}>
+                      1M
+                    </Text>
+                    <Box fontSize={'sm'}>
+                      Orders Delivered
+                    </Box>
+                  </Flex>
+                </GridItem>
+              </Grid>    
+        </Grid>   
+      </Flex>
+      <Flex data-aos="fade-down" p={10} display="flex" direction="column" justify="flex-start">
+        <Testimonials/>
+      </Flex>
+     
     </Box>
   )
 }
