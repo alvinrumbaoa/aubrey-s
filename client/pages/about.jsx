@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Flex} from '@chakra-ui/react'
 const About = () => {
   return (
 	<Flex  as="main" role="main" direction={{ sm: 'column', md: 'row', lg: 'row'  }} >
