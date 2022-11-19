@@ -38,8 +38,8 @@ export default function Home() {
       <Flex  as="main" role="main" direction={{ sm: 'column', md: 'row', lg: 'row'  }} >
             {/* HERO TITLE */}
             <Flex  p={20} direction={{ xs:'column', sm: 'column', md: 'row', lg: 'row'  }} bgColor="#FEDADA" display="flex" >
-              <Box justify={{sm:"center", md:"start"}}  align={{sm:"center", md:"start"}} >
-                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"50",sm:60,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C">Be the BEST version of yourself</Heading>
+              <Box justify={{sm:"center", md:"start"}}  align={{xs:'center',sm:"center", md:"start"}} >
+                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"50",sm:80,md:70,lg:100}} textShadow="black 1px 1px 1px" color="#FF5975">Be the Best version of yourself</Heading>
                 <Text textAlign={{base:"center", md:"start"}} color="gray.600" fontSize={{xs:12, sm:15,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
                   <Flex direction="row" justify={{sm:"center", md:"start"}} align="center" mt={10} >
@@ -49,9 +49,9 @@ export default function Home() {
                     <Link href="#"><Image m={2} src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
                     <Link href="#"><Image m={2} src="images/Youtube.png" alt="youtube logo" boxSize={50}/></Link>
                   </Flex>
-                  <Box align="center" justify={{sm:"center", md:"start"}}>
-                  <Button rightIcon={<ShoppingCartIcon/>} _hover={{background: "white", color: "teal.500"}} mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
-                  </Box>
+                  <Flex justify={{sm:"center", md:"start"}}>
+                     <Button p={6} mt={10} size="2xl" background="#FF5975" color="white"><Link href="/products">Shop Now</Link></Button>            
+                   </Flex> 
                  
                 </Box>
                 <Box >
@@ -77,7 +77,7 @@ export default function Home() {
         <Heading p={10} color="white" textAlign="center" fontSize={{sm:35,md:40,lg:60}}>Featured Products</Heading>
         <Flex  direction="column" justify="center" align="center">
           <SimpleGrid p={10} columns={[1, 1, 1, 3]} spacing="40px">
-            <Card  background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -86,7 +86,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='pink.200' fontSize='2xl'>
-                              $450
+                              PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -100,7 +100,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product2.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -109,7 +109,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='red.500' fontSize='2xl'>
-                              $450
+                              PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -123,7 +123,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product3.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -132,7 +132,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='red.500' fontSize='2xl'>
-                              $450
+                              PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -146,7 +146,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product4.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -155,7 +155,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='red.500' fontSize='2xl'>
-                              $450
+                              PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -169,7 +169,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product5.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -178,7 +178,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='red.500' fontSize='2xl'>
-                              $450
+                                PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -192,7 +192,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product6.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -201,7 +201,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='red.500' fontSize='2xl'>
-                              $450
+                              PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -215,7 +215,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                         <Image src="/images/product7.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
                         <Stack mt='6' spacing='3'>
@@ -224,7 +224,7 @@ export default function Home() {
                               This soap is perfect for every skin.
                             </Text>
                             <Text color='red.500' fontSize='2xl'>
-                              $450
+                              PHP450
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -238,7 +238,7 @@ export default function Home() {
                   </CardFooter>
             </Card>
 
-            <Card background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
+            <Card data-aos="fade-left" background="white" p={10} boxShadow='lg'borderRadius="lg" maxW="sm">
                   <CardBody p={2}>  
                 
                         <Image src="/images/product8.JPG" borderRadius="lg" alt="rosmar-soap-1" w="300px"/>
@@ -248,8 +248,8 @@ export default function Home() {
                           <Text fontSize="sm">
                               This soap is perfect for every skin.
                             </Text>
-                            <Text color='pink.200' fontSize='2xl'>
-                              $450 
+                            <Text color='red.500' fontSize='2xl'>
+                              PHP450 
                             </Text>
                         </Stack>
                   </CardBody> 
@@ -266,8 +266,7 @@ export default function Home() {
             
         </SimpleGrid>
         <Flex justify="center">
-          <Button p={6} mt={10} size="2xl"><Link href="/products">More Products</Link></Button>        
-           
+          <Button p={6} mt={10} size="2xl"><Link href="/products">More Products</Link></Button>            
         </Flex>  
       </Flex>
       </Flex> 
@@ -280,9 +279,9 @@ export default function Home() {
       </Flex> 
        
       <Flex p={10} display="flex" direction='column' h="full" align="center" justify="center" >
-        <Heading fontSize={{xs:40,sm:50,md:60,lg:100}} aos-data="fade-up" p={20} justify="center" align="center" color="gray.700">Our Trusted Partners</Heading>
+        <Heading fontSize={{xs:40,sm:50,md:60,lg:80}} aos-data="fade-up" p={20} justify="center" align="center" color="gray.700">Our Trusted Partners</Heading>
       </Flex> 
-      <Flex align="center" justify="space-around" direction={{sm:"column",lg:"row"}}>
+      <Flex align="center" justify="space-around" direction={{base:"column",sm:"column",lg:"row"}}>
               <Image data-aos="fade-up" p={2} data-aos-duration="500" src="/images/rosmar.png" alt="rosmar-logo" h='200px' />
               <Image data-aos="fade-up" p={2} data-aos-duration="1500" src="/images/psph.png" alt="rosmar-logo" h="50"  />
               <Image data-aos="fade-up" p={2} data-aos-duration="1800" src="/images/gluta.png" alt="rosmar-logo" boxSize='100px'/>
@@ -290,82 +289,56 @@ export default function Home() {
               <Image data-aos="fade-up" p={2}  data-aos-duration="2300" src="/images/fairy.png" alt="rosmar-logo" boxSize='300px'/>
       </Flex>
      
-      <Flex p={10} mt={10} display="flex" direction={{base:"column", sm:"column", md:"column",lg:"row"}} align="center" justify="space-around" >
-                  <Image data-aos="fade-down"src="/images/delivery.png" alt="delivery truck"></Image>
-                  <Stack maxW='lg' >
-                    <Center>
-                    <Heading mt={2} color="#BC2973">Delivery is safe and secure</Heading>
-                    <Text mt={20}>A bundle of 210+ ready-to-use, responsive and accessible components with clever structured sourcode files</Text>
-                    <Button mt={10} w="200px" p={6} size="2xl"><Link href="/products">Order Now</Link></Button>  
-                    </Center>
-                    
+      <Flex p={20} mt={10} display="flex" direction={{base:"column", sm:"column", md:"column",lg:"row"}} align="center" justify="space-around" >
+                  <Image align={{sm:"center", md:"center"}}data-aos="fade-down"src="/images/delivery.png" alt="delivery truck"></Image>
+                  <Stack align={{sm:"center", md:"center"}} p={10} maxW='lg' >
+                  
+                    <Heading textAlign={{sm:"center", md:"center"}} mt={2} color="#BC2973">Delivery is safe and secure</Heading>
+                    <Text align={{sm:"center", md:"center"}}mt={20}>A bundle of 210+ ready-to-use, responsive and accessible components with clever structured sourcode files</Text>
+                    <Button align={{sm:"center", md:"center"}} mt={20} w="200px" p={4} size="2xl"><Link href="/products">Order Now</Link></Button>  
+              
                   </Stack>
       </Flex>
         
       <Flex mt={2} p={10} display="flex" direction="column" align="center" justify="center">
         <Box p={2} justify="center" align="center">
-          <Image  src="/images/Pretty Woman.png" alt="woman"/>
+          <Image src="/images/Pretty Woman.png" alt="woman"/>
           <Heading color="#BC2973">Why Aubrey Curations?</Heading>
-          <Text>Because this beautiful and responsive React components will help your to realize your next project in no time.</Text>
+          <Text mt={5}>Because this beautiful and responsive React components will help your to realize your next project in no time.</Text>
         </Box> 
-          <Grid justify="space-between" align="center"
-          templateColumns={{
-          base: 'repeat(1, 1fr)',
-          sm: 'repeat(2, 1fr)',
-          md: 'repeat(4, 1fr)',
-            }}
-            gap={6}>
-              <GridItem  justify="center"w="100%" colSpan={{ base: 1, sm: 2, md: 2 }}>
-                 <Image   src="/images/map.png" alt="philippines map" h={{ base:10, sm: 200, md: 500, lg:750 }}/>
-              </GridItem>
-              <Grid  p={20} justify="center" templateColumns={{
-          base: 'repeat(2, 1fr)',
-          sm: 'repeat(2, 1fr)',
-          md: 'repeat(2, 1fr)',
-            }} gap={10}>
-              <GridItem  w="100%">
-                <Flex flexDirection={'column'}>
-                  <Text fontSize={'4xl'} fontWeight={'bold'}>
-                    200+
-                  </Text>
-                  <Box fontSize={'sm'}>
-                    Affiliated Resellers
-                  </Box>
-                  </Flex>
-                </GridItem>
-                <GridItem  w="100%">
-                  <Flex flexDirection={'column'}>
-                    <Text fontSize={'4xl'} fontWeight={'bold'}>
-                      150
-                    </Text>
-                    <Box fontSize={'sm'}>
-                      Cities Distributed
-                    </Box>
-                  </Flex>
-                </GridItem>
-                <GridItem  w="100%">
-                  <Flex flexDirection={'column'}>
-                    <Text fontSize={'4xl'} fontWeight={'bold'}>
-                      150
-                    </Text>
-                    <Box fontSize={'sm'}>
-                      Cities Distributed
-                    </Box>
-                  </Flex>
-                </GridItem>
-                <GridItem   w="100%">
-                  <Flex flexDirection={'column'}>
-                    <Text fontSize={'4xl'} fontWeight={'bold'}>
-                      1M
-                    </Text>
-                    <Box fontSize={'sm'}>
-                      Orders Delivered
-                    </Box>
-                  </Flex>
-                </GridItem>
-              </Grid>    
-        </Grid>   
+        <Box p={2} direction={{sm:"column",md:'row',lg:"row"}} justify="space-around" align="center">
+          <Image data-aos="zoom-out" src="/images/map.png" alt="philippines map" h={{ base:10, sm: 300, md: 500, lg:550 }}/> 
+          <SimpleGrid  columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+            <Box rounded={'lg'} p={5} border={'1px solid'}>
+              <Text as='b' fontSize="5xl">100</Text>
+              <Text>Affiliates</Text>
+            </Box>
+            <Box rounded={'lg'} p={5} border={'1px solid'}>
+              <Text as='b'fontSize="5xl">500</Text>
+              <Text>Serve</Text>
+            </Box>
+            <Box rounded={'lg'} p={5} border={'1px solid'}>
+              <Text as='b'fontSize="5xl">#1</Text>
+              <Text>Certified Distributor</Text>
+            </Box>
+            <Box rounded={'lg'} p={5} border={'1px solid'}>
+              <Text as='b'fontSize="5xl">150+</Text>
+              <Text>Cities</Text>
+            </Box>
+            <Box rounded={'lg'} p={5} border={'1px solid'}>
+              <Text as='b' fontSize="5xl">1,000</Text>
+              <Text>Per Day</Text>
+            </Box>
+            <Box rounded={'lg'} p={5}  border={'1px solid'} >
+              <Text as='b' fontSize="5xl">1,000</Text>
+              <Text>Serve</Text>
+            </Box>
+          </SimpleGrid>
+        </Box>
+       
+
       </Flex>
+
       <Flex p={10} display="flex" direction="column" justify="flex-start">
         <Testimonials/>
       </Flex> 
