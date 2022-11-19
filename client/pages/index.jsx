@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import Head from 'next/head'
-import {Flex, Box, Container,Highlight,Badge,SimpleGrid, Grid, GridItem,Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
+import {Flex, Box, Container, Center,Highlight,Badge,SimpleGrid, Grid, GridItem,Divider,Text, AspectRatio, Button, Image, VStack, Stack, HStack, Link, Heading} from '@chakra-ui/react';
 import { Card, CardHeader , CardBody, CardFooter } from '@chakra-ui/card'
 import {ButtonGroup} from '@chakra-ui/button'
 import Carousel from '../components/Carousel'
@@ -39,21 +39,20 @@ export default function Home() {
             {/* HERO TITLE */}
             <Flex  p={20} direction={{ xs:'column', sm: 'column', md: 'row', lg: 'row'  }} bgColor="#FEDADA" display="flex" >
               <Box justify={{sm:"center", md:"start"}}  align={{sm:"center", md:"start"}} >
-                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"50",sm:60,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C"><Highlight
-                  query='BEST'
-                  styles={{ px: '3', py: '2', rounded: 'full', bg: 'white' }}
-                >Be the BEST version of yourself</Highlight></Heading>
+                <Heading  as='h1' textAlign={{base:"center", md:"start"}} fontSize={{xs:"50",sm:60,md:60,lg:100}} textShadow="black 1px 1px 1px" color="#C2176C">Be the BEST version of yourself</Heading>
                 <Text textAlign={{base:"center", md:"start"}} color="gray.600" fontSize={{xs:12, sm:15,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
-                
-                  <Flex direction="row" justify={{base:"center", md:"start"}} align="center" mt={10} >
+                  <Flex direction="row" justify={{sm:"center", md:"start"}} align="center" mt={10} >
                     <Link href="#"><Image m={2} src="images/Facebook.png" alt="Facebook" boxSize={50} /></Link>
                     <Link href="#"><Image m={2} src="images/Instagram.png" alt="instagram logo" boxSize={50}/></Link>
                     <Link href="#"><Image m={2} src="images/Shopee.png" alt="shoppe" boxSize={50}/></Link>
                     <Link href="#"><Image m={2} src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
                     <Link href="#"><Image m={2} src="images/Youtube.png" alt="youtube logo" boxSize={50}/></Link>
                   </Flex>
+                  <Box align="center" justify={{sm:"center", md:"start"}}>
                   <Button rightIcon={<ShoppingCartIcon/>} _hover={{background: "white", color: "teal.500"}} mt={10} p={6} boxShadow="black 1px 1px 1px" color="white" background="#FF5975">Shop Now</Button>
+                  </Box>
+                 
                 </Box>
                 <Box >
                 <Image display={{xs:'none', sm:'none', md:'flex', lg: 'flex'}} src="images/Hero.png" w={{sm:400, md:500, lg:600}} w={{sm:400, md:500, lg:600}}/>
@@ -63,11 +62,9 @@ export default function Home() {
   
       </Flex>  
     
-      <Flex p={20}  data-aos="zoom-in" direction="column" justify="center" align="center">
-              <Heading textAlign="center" mb={10} fontSize="7xl" textShadow="gray  2px 2px 2px"color="#FF5975">Latest News</Heading>       
-            
-              <Carousel/>
-              
+      <Flex mb={20} data-aos="zoom-in" direction="column" justify="center" align="center">
+        <Heading textAlign="center" p={20} mb={10} fontSize="7xl" textShadow="gray  2px 2px 2px"color="#FF5975">New Arrival</Heading>       
+        <Carousel/>
       </Flex>
     
       <Flex h="full"  w='100%' pb={10} direction="column" background="#FF5975" justify="center">
@@ -282,24 +279,26 @@ export default function Home() {
 		   	</svg>
       </Flex> 
        
-      <Flex p={10} display="flex" direction="column" h="full" align="center" justify="center" >
+      <Flex p={10} display="flex" direction='column' h="full" align="center" justify="center" >
         <Heading fontSize={{xs:40,sm:50,md:60,lg:100}} aos-data="fade-up" p={20} justify="center" align="center" color="gray.700">Our Trusted Partners</Heading>
-        <SimpleGrid justify="center" align="center" columns={[1, null, 5]} spacing="20px">
-              <Image src="/images/rosmar.png" alt="rosmar-logo"  />
-              <Image src="/images/psph.png" alt="rosmar-logo" />
-              <Image src="/images/gluta.png" alt="rosmar-logo" />
-              <Image src="/images/brilliant.png" alt="rosmar-logo" />
-              <Image src="/images/fairy.png" alt="rosmar-logo" />
-          
-        </SimpleGrid>
       </Flex> 
+      <Flex align="center" justify="space-around" direction={{sm:"column",lg:"row"}}>
+              <Image data-aos="fade-up" p={2} data-aos-duration="500" src="/images/rosmar.png" alt="rosmar-logo" h='200px' />
+              <Image data-aos="fade-up" p={2} data-aos-duration="1500" src="/images/psph.png" alt="rosmar-logo" h="50"  />
+              <Image data-aos="fade-up" p={2} data-aos-duration="1800" src="/images/gluta.png" alt="rosmar-logo" boxSize='100px'/>
+              <Image data-aos="fade-up" p={2} data-aos-duration="2000" src="/images/brilliant.png" alt="rosmar-logo" h="100" />
+              <Image data-aos="fade-up" p={2}  data-aos-duration="2300" src="/images/fairy.png" alt="rosmar-logo" boxSize='300px'/>
+      </Flex>
      
       <Flex p={10} mt={10} display="flex" direction={{base:"column", sm:"column", md:"column",lg:"row"}} align="center" justify="space-around" >
                   <Image data-aos="fade-down"src="/images/delivery.png" alt="delivery truck"></Image>
                   <Stack maxW='lg' >
+                    <Center>
                     <Heading mt={2} color="#BC2973">Delivery is safe and secure</Heading>
                     <Text mt={20}>A bundle of 210+ ready-to-use, responsive and accessible components with clever structured sourcode files</Text>
                     <Button mt={10} w="200px" p={6} size="2xl"><Link href="/products">Order Now</Link></Button>  
+                    </Center>
+                    
                   </Stack>
       </Flex>
         
@@ -317,7 +316,7 @@ export default function Home() {
             }}
             gap={6}>
               <GridItem  justify="center"w="100%" colSpan={{ base: 1, sm: 2, md: 2 }}>
-                 <Image   src="/images/map.png" alt="" h={{ base:0, sm: 20, md: 40, lg:60 }}/>
+                 <Image   src="/images/map.png" alt="philippines map" h={{ base:10, sm: 200, md: 500, lg:750 }}/>
               </GridItem>
               <Grid  p={20} justify="center" templateColumns={{
           base: 'repeat(2, 1fr)',
