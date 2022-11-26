@@ -18,16 +18,15 @@ const Nav = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-	<Flex as="nav" m={5} p={5} role="navigation" justify="space-between" bg="bg-accent">
+	<Flex as="nav"  p={5} role="navigation" justify="space-between" bg="bg-accent">
 				<Flex >
 					<Tooltip label="Home" >
 						<Link href="/"><Image src="/images/Logo.png" alt="logo"  align="center" justify="center" p={{sm:7}} mt={{lg:6}} /></Link>
 					</Tooltip>
 				</Flex>
-			<Flex display="flex" justify="center"  direction="column">
-			{ 
-			isOpen ? (
-			<Fade in={isOpen}>
+			<Flex display="flex" justify="center" align="center"  direction="column">
+			
+			
 			<Box  display={{ xs:'flex', sm:'flex', md: 'none' }}>
 				<Menu>
 					<MenuButton
@@ -60,10 +59,9 @@ const Nav = () => {
 					</MenuList>
 				</Menu>
 			</Box>
-			</Fade>
-			) : null}
+			
 			</Flex>
-			<Flex p={10} justify="center" display={{ base: 'none', md: 'flex' }}>
+			<Flex p={10} justify="center" align="center" display={{ base: 'none', md: 'flex' }}>
 					<Tooltip label="Home" >
 						<Button m={1}  size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/">Home</Link></Button>
 					</Tooltip>

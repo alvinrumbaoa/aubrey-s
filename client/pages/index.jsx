@@ -292,10 +292,10 @@ export default function Home() {
       <Flex p={10} display="flex" direction="column" justify="flex-start">
         <Testimonials/>
       </Flex> 
-      <Flex p={20} background="#BC2973" display="flex" direction="column" align="center" justify="center">
-            <Heading color="white" textAlign="center" fontSize="5xl">Aubrey Approves your Success</Heading>
-            <Text color="white">Be our Reseller and Business Partner</Text>
-            <Flex direction={{base:"column", lg:"row"}}>
+      <Flex  p={20} background="#BC2973" display="flex" direction="column" align="center" justify="center">
+            <Heading data-aos="fade-up" data-aos-anchor-placement="center-bottom" color="white" textAlign="center" fontSize="5xl">Aubrey Approves your Success</Heading>
+            <Text data-aos="fade-up" data-aos-anchor-placement="center-bottom"color="white">Be our Reseller and Business Partner</Text>
+            <Flex data-aos="fade-up" data-aos-anchor-placement="center-bottom" direction={{base:"column", lg:"row"}}>
                 <Image src="/images/aubreyprod.png" alt="allprod"/>
                 <Flex direction="column" justify="space-around">
                   <VStack textAlign="start">
