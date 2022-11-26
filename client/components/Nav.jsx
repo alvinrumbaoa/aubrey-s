@@ -1,6 +1,17 @@
 import React from 'react'
 import {Flex, Box,useDisclosure, IconButton, Button, Stack, Tooltip,Fade, Image,Link,Heading, HStack, VStack, Text} from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';	
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import {FaHome, FaInfoCircle, FaShoppingBag, FaPhoneAlt} from 'react-icons/fa';
+import {
+	Menu,
+	MenuButton,
+	MenuList,
+	MenuItem,
+	MenuItemOption,
+	MenuGroup,
+	MenuOptionGroup,
+	MenuDivider,
+  } from '@chakra-ui/react'	
 
 const Nav = () => {
 
@@ -14,35 +25,40 @@ const Nav = () => {
 					</Tooltip>
 				</Flex>
 			<Flex display="flex" justify="center"  direction="column">
-			<IconButton mt={1} 
-            size={'sm'}
-			justify="center"
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-            	/>
 			{ 
 			isOpen ? (
 			<Fade in={isOpen}>
-			<Box  display={{ sm:'flex', md: 'none' }}>
-				<Stack as={'nav'} spacing={2}>
-					<Tooltip label="Home" >
-						<Button m={1} as="Button" size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='ghost'><Link href="/">Home</Link></Button>
-					</Tooltip>
-					<Tooltip label="About" >   
-						<Button m={1} size="lg" color="#C2176C"bg="none"fontWeight="bold"   variant='ghost'><Link href="/about">About</Link></Button>	
-					</Tooltip>
-					<Tooltip label="Product" > 
-						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold" variant='ghost'><Link href="/projects">Projects</Link></Button>
-					</Tooltip>
-					<Tooltip label="Blog" > 
-						<Button m={1} size="lg" color="#C2176C" bg="none"  variant='solid'><Link href="/blog">Blog</Link></Button>
-					</Tooltip>
-					<Tooltip label="Contact" >  
-						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold" variant='ghost'><Link href="https://us8.list-manage.com/contact-form?u=afec8b25509efb15bea95104a&form_id=94569d40ba7c7c0dcb1110a7c2eb11b2">Contact</Link></Button>
-					</Tooltip>			
-				</Stack>
+			<Box  display={{ xs:'flex', sm:'flex', md: 'none' }}>
+				<Menu>
+					<MenuButton
+						as={IconButton}
+						aria-label='Options'
+						icon={<HamburgerIcon />}
+						variant='outline'
+					/>
+					<MenuList>
+						<Link href="/">
+							<MenuItem icon={<FaHome />}>
+								Home
+							</MenuItem>
+						</Link>
+						<Link href="/about">
+							<MenuItem icon={<FaInfoCircle />}>
+								About
+							</MenuItem>
+						</Link>
+						<Link href="/products">
+							<MenuItem icon={<FaShoppingBag />}>
+								Product
+							</MenuItem>
+						</Link>
+						<Link href="/contact">
+							<MenuItem icon={<FaPhoneAlt />}>
+								Contact	
+							</MenuItem>
+						</Link>
+					</MenuList>
+				</Menu>
 			</Box>
 			</Fade>
 			) : null}
@@ -55,13 +71,10 @@ const Nav = () => {
 						<Button m={1} size="lg" color="#C2176C"bg="none" fontWeight="bold"  variant='solid'><Link href="/about">About</Link></Button>	
 					</Tooltip>
 					<Tooltip label="Product" > 
-						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/projects">Projects</Link></Button>
-					</Tooltip>
-					<Tooltip label="Blog" > 
-						<Button m={1} size="lg" color="#C2176C" bg="none" variant='solid'><Link href="/blog">Blog</Link></Button>
+						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/products">Product</Link></Button>
 					</Tooltip>
 					<Tooltip label="Contact" >  
-						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="https://us8.list-manage.com/contact-form?u=afec8b25509efb15bea95104a&form_id=94569d40ba7c7c0dcb1110a7c2eb11b2">Contact</Link></Button>
+						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/contact">Contact</Link></Button>
 					</Tooltip>
 				
 					
