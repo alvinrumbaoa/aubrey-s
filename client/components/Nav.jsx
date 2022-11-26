@@ -14,7 +14,7 @@ const Nav = () => {
 					</Tooltip>
 				</Flex>
 			<Flex display="flex" justify="center"  direction="column">
-			<IconButton mt={3} 
+			<IconButton mt={1} 
             size={'sm'}
 			justify="center"
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -34,13 +34,13 @@ const Nav = () => {
 						<Button m={1} size="lg" color="#C2176C"bg="none"fontWeight="bold"   variant='ghost'><Link href="/about">About</Link></Button>	
 					</Tooltip>
 					<Tooltip label="Product" > 
-						<Button m={1} s	ize="lg" color="#C2176C" bg="none" fontWeight="bold" variant='ghost'><Link href="/projects">Projects</Link></Button>
+						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold" variant='ghost'><Link href="/projects">Projects</Link></Button>
 					</Tooltip>
 					<Tooltip label="Blog" > 
 						<Button m={1} size="lg" color="#C2176C" bg="none"  variant='solid'><Link href="/blog">Blog</Link></Button>
 					</Tooltip>
 					<Tooltip label="Contact" >  
-						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold" variant='ghost'><Link href="https://us8.list-manage.com/contact-form?u=afec8b25509efb15bea95304a&form_id=94569d40ba7c7c0dcb1310a7c2eb11b2">Contact</Link></Button>
+						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold" variant='ghost'><Link href="https://us8.list-manage.com/contact-form?u=afec8b25509efb15bea95104a&form_id=94569d40ba7c7c0dcb1110a7c2eb11b2">Contact</Link></Button>
 					</Tooltip>			
 				</Stack>
 			</Box>
@@ -49,19 +49,19 @@ const Nav = () => {
 			</Flex>
 			<Flex p={10} justify="center" display={{ base: 'none', md: 'flex' }}>
 					<Tooltip label="Home" >
-						<Button m={3}  size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/">Home</Link></Button>
+						<Button m={1}  size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/">Home</Link></Button>
 					</Tooltip>
 					<Tooltip label="About" >   
-						<Button m={3} size="lg" color="#C2176C"bg="none" fontWeight="bold"  variant='solid'><Link href="/about">About</Link></Button>	
+						<Button m={1} size="lg" color="#C2176C"bg="none" fontWeight="bold"  variant='solid'><Link href="/about">About</Link></Button>	
 					</Tooltip>
 					<Tooltip label="Product" > 
-						<Button m={3} size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/projects">Projects</Link></Button>
+						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/projects">Projects</Link></Button>
 					</Tooltip>
 					<Tooltip label="Blog" > 
-						<Button m={3} size="lg" color="#C2176C" bg="none" variant='solid'><Link href="/blog">Blog</Link></Button>
+						<Button m={1} size="lg" color="#C2176C" bg="none" variant='solid'><Link href="/blog">Blog</Link></Button>
 					</Tooltip>
 					<Tooltip label="Contact" >  
-						<Button m={3} size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="https://us8.list-manage.com/contact-form?u=afec8b25509efb15bea95304a&form_id=94569d40ba7c7c0dcb1310a7c2eb11b2">Contact</Link></Button>
+						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="https://us8.list-manage.com/contact-form?u=afec8b25509efb15bea95104a&form_id=94569d40ba7c7c0dcb1110a7c2eb11b2">Contact</Link></Button>
 					</Tooltip>
 				
 					
