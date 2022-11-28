@@ -50,7 +50,7 @@ export default function Home() {
                   <Flex direction="row" justify={{sm:"center", md:"start"}} align="center" mt={10} >
                     <Link href="https://www.facebook.com/aubreycurations"><Image m={2} src="images/Facebook.png" alt="Facebook" boxSize={50} /></Link>
                     <Link href="https://www.instagram.com/aubreyapproves/"><Image m={2} src="images/Instagram.png" alt="instagram logo" boxSize={50}/></Link>
-                    <Link href="#"><Image m={2} src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
+                    <Link href="https://www.tiktok.com/@aubreyscurations"><Image m={2} src="images/Tiktok.png" alt="tiktoklogo" boxSize={50}/></Link>
                   </Flex>
                   <Flex justify={{xs:"center",sm:"center", md:"start"}}>
                     <Button p={6} mt={10} size="2xl" background="#BC2973" color="white"><Link href="/products">Shop Now</Link></Button>            
