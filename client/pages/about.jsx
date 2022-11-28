@@ -22,27 +22,27 @@ const About = () => {
 			<Heading color="#FFFFFF" fontSize="70">Who We Are</Heading>
 			<Flex align="center" justify="space-around" direction={{base:"column",sm:"column",lg:"row"}}>
 					<Box boxSize="300px"  align="center" justify="center" boxShadow='2xl' rounded={'lg'} m={10} p={5} background="#FEDADA" >
-						<Image/>
-						<Text as='b' fontSize="xl">All Prducts Tested  Proven</Text>
+						<Image src="/images/Cleansing.png"/>
+						<Text mt={2} as='b' fontSize="xl">All Prducts Tested  Proven</Text>
 						<Text>Lorem ipsum dolor sit amet</Text>
 					</Box>
 
 					<Box boxSize="300px" align="center" justify="center"boxShadow='2xl' rounded={'lg'} m={10} p={5} background="#FEDADA">
-						<Image/>
-						<Text as='b' fontSize="xl">All Prducts Tested  Proven</Text>
+						<Image src="/images/Helping Hand.png"/>
+						<Text mt={2} as='b' fontSize="xl">All Prducts Tested  Proven</Text>
 						<Text>Lorem ipsum dolor sit amet</Text>
 					</Box>
 
 					<Box boxSize="300px" align="center" justify="center" boxShadow='2xl' rounded={'lg'} m={10} p={5} background="#FEDADA">
-						<Image/>
-						<Text as='b' fontSize="xl">All Prducts Tested  Proven</Text>
+						<Image src="/images/Response.png"/>
+						<Text mt={2} as='b' fontSize="xl">All Prducts Tested  Proven</Text>
 						<Text>Lorem ipsum dolor sit amet</Text>
 					</Box>
 			</Flex>
 			<Button>Be Affiliated</Button>
 		</Flex>
-		<Flex    align="center" direction="column" justify="center">
-			<Heading mt="2" textAlign="center" color="#BC2973" fontSize="70" >Certified Distributor</Heading>
+		<Flex p={10} align="center" direction="column" justify="center">
+			<Heading m={5} textAlign="center" color="#BC2973" fontSize="70" >Certified Distributor</Heading>
 			<Flex align="center" justify="space-around" direction={{base:"column",sm:"column",lg:"row"}}>
 					<Image p={5} src="/images/disti1.jpg" boxSize={300}/>
 					<Image p={5} src="/images/disti2.jpg" boxSize={300}/>
@@ -52,8 +52,10 @@ const About = () => {
 
 				</Flex>
 		</Flex>
-		<Flex h="" w='full' align="center" justify="center">
-			<Heading>Our Latest Social Media Post</Heading>
+		<Flex data-aos="fade-up" p={20} h="" w='full' align="center" justify="center"  direction={{base:"column",sm:"column",lg:"column"}}>
+			<Heading m={5} textAlign="center" color="#BC2973" fontSize="70">Our Story</Heading>
+			<Image src="/images/story.png" object="cover" boxSize="450" />
+			<Text mt={2} >Lorem ipsum dolor sit amet</Text>
 		</Flex>
 		</Flex>
   )

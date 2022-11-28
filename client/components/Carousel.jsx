@@ -34,7 +34,7 @@ export default function Carousel() {
   const cards = [
     '/images/Banner1.png',
     '/images/Banner2.png',
-    '/images/Banner3.png',
+    '/images/disti1.png',
     '/images/1.png',
     '/images/2.png',
     '/images/3.png'
@@ -43,8 +43,8 @@ export default function Carousel() {
   return (
     <Box
       position={'relative'}
-      height={'full'}
-      width={'full'}
+      height={{sm:"50%",lg:'full'}}
+      width={{sm:"90%",lg:'full'}}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
       <link
@@ -61,7 +61,7 @@ export default function Carousel() {
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
-        colorScheme="pink"
+        colorScheme="white"
         borderRadius="full"
         position="absolute"
         left={side}
@@ -74,7 +74,7 @@ export default function Carousel() {
       {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
-        colorScheme="pink"
+        colorScheme="white"
         borderRadius="full"
         position="absolute"
         right={side}
