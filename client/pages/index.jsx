@@ -46,11 +46,9 @@ export default function Home() {
                 <Text textAlign={{base:"center", md:"start"}} color="gray.600" fontSize={{xs:12, sm:15,md:18,lg:20}} mt={5}>We are committed to providing the highest quality and certified skin care products and customer service.</Text>
                 {/* Social Media Links */}
                   <Flex direction="row" justify={{sm:"center", md:"start"}} align="center" mt={10} >
-                    <Link href="#"><Image m={2} src="images/Facebook.png" alt="Facebook" boxSize={50} /></Link>
-                    <Link href="#"><Image m={2} src="images/Instagram.png" alt="instagram logo" boxSize={50}/></Link>
-                    <Link href="#"><Image m={2} src="images/Shopee.png" alt="shoppe" boxSize={50}/></Link>
+                    <Link href="https://www.facebook.com/aubreycurations"><Image m={2} src="images/Facebook.png" alt="Facebook" boxSize={50} /></Link>
+                    <Link href="https://www.instagram.com/aubreyapproves/"><Image m={2} src="images/Instagram.png" alt="instagram logo" boxSize={50}/></Link>
                     <Link href="#"><Image m={2} src="images/Tiktok.png" alt="tiktok logo" boxSize={50}/></Link>
-                    <Link href="#"><Image m={2} src="images/Youtube.png" alt="youtube logo" boxSize={50}/></Link>
                   </Flex>
                   <Flex justify={{xs:"center",sm:"center", md:"start"}}>
                     <Button p={6} mt={10} size="2xl" background="#BC2973" color="white"><Link href="/products">Shop Now</Link></Button>            
