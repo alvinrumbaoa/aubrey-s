@@ -7,7 +7,7 @@ const product = ({data }) => {
   return (
 	<Flex m={10} justify='center' align="center" direction="column">
 		<Heading>Products</Heading>
-		
+		<Flex m={10} justify='center' align="center" direction="row">
 		{
 		data.product.map((item) => (
 			<Box m={10} p={20} background="#BC2973" boxShadow="black 2px 2px 10px" borderRadius="lg" >
@@ -18,7 +18,7 @@ const product = ({data }) => {
 			</Box>
 		))
 		}
-		
+		</Flex>
 	</Flex>
   )
 }

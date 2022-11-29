@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
-import{Box, Flex, Heading, Text, Link, Button} from '@chakra-ui/react'
+import {Box, Flex, Heading, Text, Link, Button} from '@chakra-ui/react'
+
 const add = () => {
-   const [form. setForm] = useState({
+   const [form, setForm] = useState({
 		productName:'',
 		quantity:0,
 		price:0,
@@ -10,10 +11,10 @@ const add = () => {
    })
 
   return (
-		<div>
-		<h1>Create new Product</h1>
-
-		</div>
+		<Flex>
+		<Heading>Create new Product</Heading>
+		<Input/>
+		</Flex>
   )
 }
 
