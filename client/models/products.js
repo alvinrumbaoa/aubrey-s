@@ -28,7 +28,11 @@ const ProductSchema = new mongoose.Schema({
 	},
 	order:{
 		type:Number	
+	},
+	instock:{
+		type:Number	
 	}
+	
 })
 
 export default mongoose.models['Product'] || mongoose.model("Product", ProductSchema)

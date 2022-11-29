@@ -1,10 +1,19 @@
 import React from 'react'
+import axios from 'axios'
+import {Box, Link, Heading,Button, Text, Input, Flex } from '@chakra-ui/react'
 
 const index = () => {
   return (
-	<div>
-		<h1>Test</h1>
-	</div>
+	<Flex justify="center" align="center" direction="column">
+		<Heading>Admin Panel</Heading>
+
+		{/* display products */}
+		
+
+
+
+		<Button><Link href="/admin/add">Add Products</Link></Button>
+	</Flex>	
   )
 }
 

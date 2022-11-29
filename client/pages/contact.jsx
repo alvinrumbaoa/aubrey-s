@@ -44,7 +44,7 @@ import {
 				<WrapItem>
 				  <Box>
 					<Image src="/images/logo2.png" h="90" />
-					<Heading textAlign="center">Contact</Heading>
+					<Heading textAlign="center">Contact us</Heading>
 					<Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
 					  Fill up the form below to contact
 					</Text>

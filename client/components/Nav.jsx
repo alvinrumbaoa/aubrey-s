@@ -69,7 +69,7 @@ const Nav = () => {
 						<Button m={1} size="lg" color="#C2176C"bg="none" fontWeight="bold"  variant='solid'><Link href="/about">About</Link></Button>	
 					</Tooltip>
 					<Tooltip label="Product" > 
-						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/products">Product</Link></Button>
+						<Button m={1} size="lg" color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/product">Product</Link></Button>
 					</Tooltip>
 					<Tooltip label="Contact" >  
 						<Button m={1} size="lg"  color="#C2176C" bg="none" fontWeight="bold"  variant='solid'><Link href="/contact">Contact</Link></Button>
