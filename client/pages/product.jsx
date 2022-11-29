@@ -26,7 +26,7 @@ const product = ({data }) => {
 
 export async function getStaticProps() {
 	// Fetch data from external API
-	const res = await fetch(`http://localhost:3000/api/products`)
+	const res = await fetch(`http://aubrey-s.vercel.app/api/products`)
 	const data = await res.json()
 	console.log(data)
 	// Pass data to the page via props

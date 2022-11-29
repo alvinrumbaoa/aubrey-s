@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Box, Flex, Heading, Text, Link, Button} from '@chakra-ui/react'
+import {Box, Flex, Heading, Input, Text, Link, Button} from '@chakra-ui/react'
 
 const add = () => {
    const [form, setForm] = useState({
