@@ -30,3 +30,11 @@ export default async(req, res) =>{
 	}
 }
 //post products
+
+
+const index = ()=>{
+	return(
+		<>
+		</>
+	)
+}
