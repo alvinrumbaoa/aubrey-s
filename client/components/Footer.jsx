@@ -10,15 +10,11 @@ import {
 	VisuallyHidden,
 	Input,
 	IconButton,
-	useColorModeValue,
-  } from '@chakra-ui/react';
-  import { ReactNode } from 'react';
-  import { FaInstagram, FaTwitter, FaYoutube, FaTiktok } from 'react-icons/fa';
-  import { BiMailSend } from 'react-icons/bi';
-  
-  
-  
-  const SocialButton = ({
+	useColorModeValue, } from '@chakra-ui/react';
+import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
+import { BiMailSend } from 'react-icons/bi';
+
+const SocialButton = ({
 	children,
 	label,
 	href,
@@ -47,9 +43,9 @@ import {
   
   const ListHeader = ({ children }) => {
 	return (
-	  <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+	    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
 		{children}
-	  </Text>
+	    </Text>
 	);
   };
   
@@ -70,16 +66,13 @@ import {
 				© 2022 Aubrey's Curations. All rights reserved
 			  </Text>
 			  <Stack direction={'row'} spacing={6}>
-				<SocialButton label={'Twitter'} href={'#'}>
-				  <FaTwitter />
+				<SocialButton label={'Facebook'} href={'https://www.facebook.com/aubreycurations'}>
+			      <FaFacebook />
 				</SocialButton>
-				<SocialButton label={'YouTube'} href={'#'}>
-				  <FaYoutube />
-				</SocialButton>
-				<SocialButton label={'Instagram'} href={'#'}>
+				<SocialButton label={'Instagram'} href={'https://www.instagram.com/aubreyapproves'}>
 				  <FaInstagram />
 				</SocialButton>
-				<SocialButton label={'Tiktok'} href={'#'}>
+				<SocialButton label={'Tiktok'} href={'https://www.tiktok.com/@aubreyscurations'}>
 				  <FaTiktok />
 				</SocialButton>
 			  </Stack>
@@ -102,6 +95,7 @@ import {
 			  <Stack direction={'row'}>
 				<Input
 				  placeholder={'Your email address'}
+
 				  bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
 				  border={0}
 				  _focus={{
