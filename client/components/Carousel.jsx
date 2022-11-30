@@ -43,7 +43,7 @@ export default function Carousel() {
   return (
     <Box
       position={'relative'}
-      height='full'
+      height='auto'
       width='full'
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
@@ -61,7 +61,7 @@ export default function Carousel() {
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
-        colorScheme="white"
+        colorScheme="red"
         borderRadius="full"
         position="absolute"
         left={side}
@@ -74,7 +74,7 @@ export default function Carousel() {
       {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
-        colorScheme="white"
+        colorScheme="red"
         borderRadius="full"
         position="absolute"
         right={side}

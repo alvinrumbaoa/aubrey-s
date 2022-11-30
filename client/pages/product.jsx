@@ -1,11 +1,12 @@
 import React from 'react'
 import axios from 'axios'
-import { Flex, Box,Button, Image, Card, CardBody, Text, Heading, Grid, GridItem} from '@chakra-ui/react'
+import { Flex, Box,Button, Image, Card, Input, CardBody, Text, Heading, Grid, GridItem} from '@chakra-ui/react'
 const product = ({data }) => {
 
 
   return (
 	<Flex m={10} justify='center' align="center" direction="column">
+		<Input type="text" />
 		<Heading>Products</Heading>
 		<Flex m={10} justify='center' align="center" direction="row">
 		{

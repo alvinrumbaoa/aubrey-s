@@ -46,7 +46,7 @@ const Nav = () => {
 								About
 							</MenuItem>
 						</Link>
-						<Link href="/products">
+						<Link href="/product">
 							<MenuItem icon={<FaShoppingBag />}>
 								Product
 							</MenuItem>
