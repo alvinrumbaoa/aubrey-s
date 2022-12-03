@@ -9,6 +9,14 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://api.example.com/:path*',
+      },
+    ]
+  },
 }
-
-module.exports = nextConfig
+const { withSuperjson } = require('next-superjson')
+module.exports = withSuperjson()(nextConfig)

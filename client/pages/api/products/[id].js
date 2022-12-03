@@ -1,7 +1,7 @@
 import dbConnect  from '../../../db/dbconnect'
 import Product from '../../../models/products'
-
 dbConnect();
+
 
 
 export default async(req, res) =>{

@@ -296,7 +296,7 @@ export default function Home() {
                     <Text color="white" >Launch your business sooner</Text>
                     <Text color="white">Resell an extensive range</Text>
                     <Text color="white">Carry no inventory</Text>
-                    <Button variant='solid' colorScheme="pink">Learn More</Button>
+                    <Button variant='solid' colorScheme="pink"><Link href="/reseller">Learn More</Link></Button>
                   </VStack>
                 </Flex>
             </Flex>
